@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Solara Bay — GTA6-01</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game" width="1280" height="720" aria-label="Solara Bay open world game"></canvas>
+<div id="hud">
+  <div class="panel top-left"><div id="wanted" class="stars">☆☆☆☆☆</div><div id="district" class="small">OUTSIDER</div><div id="cash" class="cash">$2,500</div></div>
+  <div class="panel ticker"><span class="tag">DISPATCH</span><span id="ticker">CITY SECURE</span></div>
+  <div class="panel top-right"><div id="clock" class="small">12:00 DAY</div><div id="station" class="small">♪ SOLARA FM 98.4</div></div>
+  <div id="contract" class="panel contract"><b>NO ACTIVE CONTRACT</b></div>
+  <canvas id="minimap" width="170" height="170" aria-label="City minimap"></canvas>
+  <div class="panel bottom-left-hint"><b>WASD</b> drive / move · <b>F</b> enter/exit · <b>1–4</b> weapons · <b>Click</b> fire<br><b>R</b> radio · <b>G</b> garage · <b>Y</b> contracts · <b>E</b> upgrade · <b>N</b> night race</div>
+  <div id="race" class="panel race"></div>
+  <div class="panel bottom-center"><div id="speed" class="speed">0<small> km/h</small></div><div class="bar-wrap"><div id="health" class="bar"></div></div><div id="healthNum" class="tiny">100 HP</div><div id="ammo" class="ammo">48 / 48</div></div>
+  <div id="weapons" class="weapons"><div class="slot active"><span class="key">1</span><span class="name">9MM</span><span class="count">48</span></div><div class="slot"><span class="key">2</span><span class="name">SMG</span><span class="count">180</span></div><div class="slot"><span class="key">3</span><span class="name">RIFLE</span><span class="count">120</span></div><div class="slot"><span class="key">4</span><span class="name">HEAVY</span><span class="count">8</span></div></div>
+  <div id="toast"></div>
+</div>
+<div id="garage">
+  <div class="garage-card"><h2>SOLARA GARAGE</h2><p class="small">Engine · Armor · Handling upgrades. Cash: <b id="garageCash">$2,500</b></p>
+    <button data-upgrade="engine">ENGINE <span id="lvl-engine"></span></button>
+    <button data-upgrade="armor">ARMOR <span id="lvl-armor"></span></button>
+    <button data-upgrade="handling">HANDLING <span id="lvl-handling"></span></button>
+    <button data-close="1">CLOSE (E)</button>
+  </div>
+</div>
+<div id="intro"><div class="intro-card"><h1>SOLARA BAY</h1><p>Open-world coastal city · nine contracts · five-star pursuit · Neon Mile street racing.</p><button id="newGame">NEW GAME</button><button id="continueGame">CONTINUE</button><p class="tiny">Pure offline WebGL2 · no libraries · no network</p></div></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
