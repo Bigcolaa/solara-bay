@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Solara Bay — Coastal Open World</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; background:#0a1024; }
+  body { font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif; user-select:none; -webkit-user-select:none; }
+  #stage { position:fixed; inset:0; }
+  #gl, #hud { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  #hud { pointer-events:none; }
+  #boot { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column;
+    gap:14px; color:#ffe6b5; background:radial-gradient(circle at 50% 45%,#17365a,#080d1c 70%); z-index:9; }
+  #boot b { font-size:26px; letter-spacing:.34em; font-weight:600; text-shadow:0 0 26px #ff9b4a88; }
+  #boot span { font-size:11px; letter-spacing:.24em; color:#8fd8ff; }
+  #boot.hidden { display:none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <canvas id="hud"></canvas>
+  <div id="boot"><b>SOLARA BAY</b><span>BUILDING THE COAST…</span></div>
+</div>
+<script src="./src/core/maths.js"></script>
+<script src="./src/geometry.js"></script>
+<script src="./src/world/districts.js"></script>
+<script src="./src/world/cityGenerator.js"></script>
+<script src="./src/world/lightingCycle.js"></script>
+<script src="./src/renderer.js"></script>
+<script src="./src/effects.js"></script>
+<script src="./src/audio/proceduralAudio.js"></script>
+<script src="./src/vehicles/vehicleCatalog.js"></script>
+<script src="./src/vehicles/vehiclePhysics.js"></script>
+<script src="./src/player/playerController.js"></script>
+<script src="./src/player/combatSystem.js"></script>
+<script src="./src/ai/trafficSystem.js"></script>
+<script src="./src/ai/pedestrianAI.js"></script>
+<script src="./src/ai/policePursuit.js"></script>
+<script src="./src/missions/storyMissions.js"></script>
+<script src="./src/missions/sideActivities.js"></script>
+<script src="./src/missions/missionManager.js"></script>
+<script src="./src/progression/economyGarage.js"></script>
+<script src="./src/ui/hudMinimap.js"></script>
+<script src="./src/ui/menusOverlay.js"></script>
+<script src="./src/input.js"></script>
+<script src="./src/main.js"></script>
+</body>
+</html>
